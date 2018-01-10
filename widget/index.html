@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Небезпечно для життя. Карта пішохідних переходів, на яких вас може збити машина</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/application.css">
+
+    <meta property="og:site_name" content="ТЕКСТИ.ORG.UA"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Небезпечно для життя. Карта пішохідних переходів, на яких вас може збити машина"/>
+    <meta property="og:image" content="http://texty.org.ua/d/kyiv_crossings/img/og.jpg"/>
+    <meta property="og:description" content="На одній карті ми сумістили місця швидкісного руху маршруток Київпастрансу та пішохідні переходи Києва, на яких немає світлофорів. І побачили десятки потенційно небезпечних для життя і здоров’я місць."/>
+    <meta property="og:url" content="http://texty.org.ua/d/kyiv_crossings">
+
+    <meta name="twitter:site" content="@textyorgua"/>
+    <meta property="twitter:account_id" content="49572937"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="http://texty.org.ua/d/kyiv_crossings"/>
+    <meta name="twitter:title" content="Небезпечно для життя. Карта пішохідних переходів, на яких вас може збити машина"/>
+    <meta name="twitter:description" content="На одній карті ми сумістили місця швидкісного руху маршруток Київпастрансу та пішохідні переходи Києва, на яких немає світлофорів. І побачили десятки потенційно небезпечних для життя і здоров’я місць."/>
+    <meta name="twitter:image:src" content="http://texty.org.ua/d/kyiv_crossings/img/og.jpg"/>
+    <meta name="twitter:image:width" content="1200"/>
+    <meta name="twitter:image:height" content="630"/>
+    <!-- Other Meta Tags -->
+    <meta name="title" content="Небезпечно для життя. Карта пішохідних переходів, на яких вас може збити машина">
+    <meta name="description" content="На одній карті ми сумістили місця швидкісного руху маршруток Київпастрансу та пішохідні переходи Києва, на яких немає світлофорів. І побачили десятки потенційно небезпечних для життя і здоров’я місць.">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid no-gutters">
+        <div class="col-xs-12">
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="legend" style="display: table;">
+                    <div class="table-row">
+                        <div class="column-1 table-cell"><div class="crossing_circle"> </div></div>
+                        <div class="table-cell">небезпечні переходи</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="column-1 table-cell"><div class="fast_circle"> </div></div>
+                        <div class="table-cell">місця швидісного руху транспорту</div>
+                    </div>
+                </div>
+
+                <div class="logo">
+                    <a href="http://texty.org.ua/" target="_blank"><img src="../img/logo-black.png" alt="ТЕКСТИ.ORG.UA"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/d3.v4.min.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
+<script src="../lib/share-behavior.js"></script>
+<script src="main.js"></script>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18136548-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>

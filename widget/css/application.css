@@ -1,0 +1,171 @@
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+  .no-gutters > .col,
+  .no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0; }
+
+.mapboxgl-popup {
+  max-width: 600px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: black; }
+
+.mapboxgl-popup-content {
+  width: 600px;
+  max-width: 90vw;
+  height: 350px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: black; }
+
+.map-container {
+  position: relative; }
+  .map-container .legend {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    border-radius: 5px;
+    padding-right: 14px; }
+    .map-container .legend .crossing_circle {
+      width: 24px;
+      height: 24px;
+      border: 8px solid #FEEDE8;
+      border-radius: 12px;
+      background: #F2744F; }
+    .map-container .legend .fast_circle {
+      width: 8px;
+      height: 8px;
+      border: none;
+      border-radius: 4px;
+      background: #ffbb22;
+      opacity: 0.5; }
+    .map-container .legend .table-row {
+      display: table-row; }
+    .map-container .legend .table-cell {
+      display: table-cell;
+      vertical-align: middle;
+      height: 30px; }
+    .map-container .legend .column-1 {
+      width: 36px; }
+    .map-container .legend .column-1 > div {
+      margin: 0 auto; }
+
+#map {
+  background: #000;
+  width: 100%;
+  height: 100vh; }
+  #map .mapboxgl-popup-close-button {
+    font-size: 22px;
+    color: white;
+    background-color: rgba(1, 1, 1, 0.2);
+    border: medium none;
+    border-radius: 0 3px 0 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  #map .mapboxgl-popup-close-button:hover {
+    color: #151515; }
+
+.map-title {
+  position: absolute;
+  left: 150px;
+  top: 50px;
+  font-size: 22px;
+  z-index: 999; }
+
+.map-popup-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 550px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  opacity: 0.8;
+  font-size: 12px;
+  z-index: 999;
+  color: white;
+  /* to make scrollbars always visible */ }
+  .map-popup-container .map-popup-content {
+    width: 100%;
+    height: 350px; }
+  .map-popup-container p {
+    font-size: 12px;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .map-popup-container p.ul-caption {
+    margin-top: 10px; }
+  .map-popup-container .cell-data {
+    margin-top: 5px; }
+  .map-popup-container #ul-container {
+    position: relative;
+    overflow: hidden;
+    max-height: 40vh;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .map-popup-container ul {
+    padding-left: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: table;
+    width: 100%; }
+  .map-popup-container li {
+    list-style-type: none;
+    display: table-row; }
+  .map-popup-container li span.date {
+    font-style: italic;
+    color: #999;
+    display: table-cell; }
+  .map-popup-container li a {
+    color: #EF5223;
+    display: table-cell; }
+  .map-popup-container li a:hover,
+  .map-popup-container li a.hover {
+    color: #1E90FF;
+    text-decoration: underline; }
+  .map-popup-container .p-table {
+    display: table; }
+  .map-popup-container .p-row {
+    display: table-row; }
+  .map-popup-container .p-cell {
+    display: table-cell; }
+  .map-popup-container .always-visible.ps > .ps__scrollbar-y-rail {
+    opacity: 0.6; }
+  .map-popup-container h3 {
+    margin-top: 0;
+    margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .map-popup-container h3 {
+        display: none; } }
+
+.logo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 5px;
+  padding-right: 14px; }
+  .logo .crossing_circle {
+    width: 24px;
+    height: 24px;
+    border: 8px solid #FEEDE8;
+    border-radius: 12px;
+    background: #F2744F; }
+  .logo .fast_circle {
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #ffbb22;
+    opacity: 0.5; }
+  .logo .table-row {
+    display: table-row; }
+  .logo .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 30px; }
+  .logo .column-1 {
+    width: 36px; }
+  .logo .column-1 > div {
+    margin: 0 auto; }
+
+/*# sourceMappingURL=application.css.map */

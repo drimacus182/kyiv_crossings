@@ -141,31 +141,6 @@
 .logo {
   position: absolute;
   bottom: 10px;
-  left: 10px;
-  border-radius: 5px;
-  padding-right: 14px; }
-  .logo .crossing_circle {
-    width: 24px;
-    height: 24px;
-    border: 8px solid #FEEDE8;
-    border-radius: 12px;
-    background: #F2744F; }
-  .logo .fast_circle {
-    width: 8px;
-    height: 8px;
-    border: none;
-    border-radius: 4px;
-    background: #ffbb22;
-    opacity: 0.5; }
-  .logo .table-row {
-    display: table-row; }
-  .logo .table-cell {
-    display: table-cell;
-    vertical-align: middle;
-    height: 30px; }
-  .logo .column-1 {
-    width: 36px; }
-  .logo .column-1 > div {
-    margin: 0 auto; }
+  left: 10px; }
 
 /*# sourceMappingURL=application.css.map */

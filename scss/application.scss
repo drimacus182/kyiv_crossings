@@ -302,6 +302,24 @@ h2 span {
       margin: 0 auto;
     }
   }
+
+  .generator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+
+    border: 1px solid rgba(0, 0, 0, 0.75);
+
+    font: 12px/20px "Helvetica Neue",Arial,Helvetica,sans-serif;
+
+    a {
+      text-decoration: underline;
+      color: rgba(0, 0, 0, 0.75);
+    }
+  }
 }
 
 $map_height: 100vh;

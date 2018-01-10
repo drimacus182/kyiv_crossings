@@ -2,49 +2,4 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-
-  border-radius: 5px;
-  padding-right: 14px;
-
-  .crossing_circle {
-    $inner_radius: 4px;
-    $outer_radius: 12px;
-
-    width: $outer_radius * 2;
-    height: $outer_radius * 2;
-
-    border: $outer_radius - $inner_radius solid #FEEDE8;
-    border-radius: $outer_radius;
-    background: #F2744F;
-  }
-
-  .fast_circle {
-    $radius: 4px;
-
-    width: $radius * 2;
-    height: $radius * 2;
-
-    border: none;
-    border-radius: $radius;
-    background: #ffbb22;
-    opacity: 0.5;
-  }
-
-  .table-row {
-    display: table-row;
-  }
-
-  .table-cell {
-    display: table-cell;
-    vertical-align: middle;
-    height: 30px;
-  }
-
-  .column-1 {
-    width: 36px;
-  }
-
-  .column-1 > div {
-    margin: 0 auto;
-  }
 }

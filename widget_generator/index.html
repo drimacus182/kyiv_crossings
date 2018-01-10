@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор віджета</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+
+    <style>
+        body {
+            font-family: "Open Sans", Verdana, sans-serif;
+        }
+
+        .win-size-grip {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            padding: 4px;
+            bottom: -20px;
+            right: -20px;
+            cursor: nwse-resize;
+            background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/wingrip.png) no-repeat;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div style="max-width: 500px; font-size: 12px;">Щоб змінити розмір карти потягніть за правий нижній кут. Змінюйте позицію та зум на карті. Заберіть код у вікні знизу</div>
+
+<br>
+<div id="box" style="width: 500px; height: 600px; position: relative">
+    <iframe src="http://texty.org.ua/d/kyiv_crossings/widget/" frameborder="0" width="100%" height="100%"></iframe>
+    <div class="win-size-grip" style="font-size: 10px;"></div>
+</div>
+
+
+<p>
+    <textarea id="widget_code" cols="30" rows="10" style="width: 500px;" readonly>
+
+
+    </textarea>
+</p>
+
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="jquery-resizable.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18136548-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<script>
+    var iframe = document.getElementsByTagName("iframe")[0];
+    $(document).ready(function() {
+        $("#box").resizable({
+            handleSelector: ".win-size-grip",
+            onDrag: function() {
+                var w = $("#box").width();
+                var h = $("#box").height();
+
+                $("#widget_code").text(getCode(iframe, w, h));
+            }
+        });
+
+        $("#box").on("mouseleave", function(){
+            var w = $("#box").width();
+            var h = $("#box").height();
+            $("#widget_code").text(getCode(iframe, w, h));
+        });
+
+        $("#widget_code").text(getCode(iframe, 500, 600));
+
+    });
+
+    function getCode(iframe, width, height) {
+        return '<iframe src="' + iframe.contentWindow.location.href + '" frameborder="0" width="' + width + 'px" height="' + height + 'px"' +'></iframe>';
+    }
+
+</script>
+</body>
+
+</html>

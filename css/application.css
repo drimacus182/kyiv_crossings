@@ -87,7 +87,7 @@ p {
 
 .header-container {
   background-size: cover;
-  background: url("./../img/cover.jpg") no-repeat;
+  background: url("./../img/zebra1.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
   .header-container h1 {
@@ -128,7 +128,7 @@ p {
     padding: 20px;
     margin-top: 17vw;
     margin-bottom: 17vw;
-    background: rgba(50, 50, 50, 0.5); }
+    background: rgba(50, 50, 50, 0.8); }
   .header-container .header-text {
     position: relative; }
   .header-container video {
@@ -492,12 +492,16 @@ h2 span {
   right: 55px; }
 
 .mobile .header {
-  box-shadow: 0 0 70px 70px rgba(50, 50, 50, 0.5); }
+  box-shadow: 0 0 70px 70px rgba(50, 50, 50, 0.8); }
 
 .disclaimer {
   color: #eee;
   font-size: 1.3em;
   margin-left: 15px;
-  margin-top: 68px; }
+  margin-top: 68px;
+  background: rgba(0, 0, 0, 0.53);
+  margin-right: -30px;
+  padding-left: 30px;
+  padding-right: 25px; }
 
 /*# sourceMappingURL=application.css.map */

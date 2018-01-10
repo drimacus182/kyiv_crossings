@@ -48,50 +48,10 @@
         d3.queue()
             .defer(d3.json, "data/crossings.geojson")
             .defer(d3.json, "data/cameras.geojson")
-            // .defer(d3.csv, "data/fast_3th.csv")
-            .await(function(err, crossings, cameras, fast_csv) {
+            .await(function(err, crossings, cameras) {
                 if (err) throw err;
-                //
-                // var fast = {
-                //     "type": "FeatureCollection",
-                //     "crs": {"type": "name", "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}}
-                // };
-                //
-                // fast.features = fast_csv.map(function (row) {
-                //     return { geometry: {type: "Point", coordinates: [+row.X, +row.Y]}}
-                // });
 
-                // map.addLayer({
-                //     'id': 'fast-heat',
-                //     'type': 'circle',
-                //     'source': {
-                //         type: 'geojson',
-                //         data: fast
-                //     },
-                //
-                //     "paint": {
-                //         'circle-color': "#ffbb22",
-                //         // 'circle-color': "#76b8ff",
-                //         'circle-radius': {
-                //             base: 1,
-                //             stops: [
-                //                 [10, 2],
-                //                 [16, 5]
-                //             ]
-                //         },
-                //         "circle-opacity": {
-                //             base: 2,
-                //             stops: [
-                //                 [10, 0.05],
-                //                 [11, 0.05],
-                //                 [12, 0.1],
-                //                 [16, 0.3],
-                //                 [18, 0.7]
-                //             ]
-                //         }
-                //     }
-                // });
-                // "tiles": ["http://a.texty.org.ua/maps/ukraine/{z}/{x}/{y}.pbf", "http://b.texty.org.ua/maps/ukraine/{z}/{x}/{y}.pbf", "http://c.texty.org.ua/maps/ukraine/{z}/{x}/{y}.pbf"],
+                // "tiles": ["http://a.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf", "http://b.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf", "http://c.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf"],
                 //     "maxzoom": 14
                 map.addLayer({
                     "id": "earthquakes-heat",
@@ -101,72 +61,26 @@
                         tiles: ["https://drimacus182.github.io/kyiv_crossings/data/fast_points/{z}/{x}/{y}.pbf"]
                     },
                     "source-layer": "fast",
-                    // "maxzoom": 16,
-                    // "paint": {
-                        //Increase the heatmap weight based on frequency and property magnitude
-                        // "heatmap-weight": 1,
-                        // "heatmap-weight": {
-                        //     "property": "density",
-                        //     "type": "exponential",
-                        //     "stops": [
-                        //         [0, 0],
-                        //         [15, 1]
-                        //     ]
-                        // },
-                        // //Increase the heatmap color weight weight by zoom level
-                        // //heatmap-intensity is a multiplier on top of heatmap-weight
-                        // "heatmap-intensity": {
-                        //     "stops": [
-                        //         [0, 0.5],
-                        //         [16, 0.5]
-                        //     ]
-                        // },
-                        // //Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
-                        // //Begin color ramp at 0-stop with a 0-transparancy color
-                        // //to create a blur-like effect.
-                        // "heatmap-color": [
-                        //     "interpolate",
-                        //     ["linear"],
-                        //     ["heatmap-density"],
-                        //     0, "rgba(254,235,226, 0.75)",
-                        //     0.2, "rgba(252,197,192,0.75)",
-                        //     0.4, "rgba(250,159,181,0.75)",
-                        //     0.6, "rgba(247,104,161,0.75)",
-                        //     0.8, "rgba(197,27,138,0.75)",
-                        //     1, "rgba(122,1,119,0.75)"
-                        // ],
-                        // //Adjust the heatmap radius by zoom level
-                        // "heatmap-radius": {
-                        //     "stops": [
-                        //         [0, 6],
-                        //         [10, 6],
-                        //         [12, 10],
-                        //         [16, 10]
-                        //     ]
-                        // },
-                        // //Transition from heatmap to circle layer by zoom level
-                        // "heatmap-opacity": 1,
 
-                            "paint": {
-                                'circle-color': "#ffbb22",
-                                // 'circle-color': "#76b8ff",
-                                'circle-radius': {
-                                    base: 1,
-                                    stops: [
-                                        [10, 2],
-                                        [16, 5]
-                                    ]
-                                },
-                                "circle-opacity": {
-                                    property: 'density',
-                                    // base: 2,
-                                    stops: [
-                                        [1, 0.05],
-                                        [30, 0.7]
-                                    ]
-                                }
-                            }
-                    // }
+
+                    "paint": {
+                        'circle-color': "#ffbb22",
+                        'circle-radius': {
+                            base: 1,
+                            stops: [
+                                [10, 2],
+                                [16, 5]
+                            ]
+                        },
+                        "circle-opacity": {
+                            property: 'density',
+                            // base: 2,
+                            stops: [
+                                [1, 0.05],
+                                [30, 0.7]
+                            ]
+                        }
+                    }
                 });
 
                 map.addLayer({

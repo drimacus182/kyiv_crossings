@@ -56,7 +56,7 @@
                     "type": "circle",
                     "source": {
                         type: "vector",
-                        tiles: ["https://drimacus182.github.io/kyiv_crossings/data/fast_points/{z}/{x}/{y}.pbf"]
+                        tiles: ["https://texty.github.io/kyiv_crossings/data/fast_points/{z}/{x}/{y}.pbf"]
                     },
                     "source-layer": "fast",
                         "paint": {

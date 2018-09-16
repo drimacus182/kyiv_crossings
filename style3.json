@@ -31,11 +31,11 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://free.tilehosting.com/data/v3.json?key=RiS4gsgZPZqeeMlIyxFo"
+      "url": "https://free.tilehosting.com/data/v3.json?key=x6rAwsstZPh1FO6HjN5r"
     }
   },
   "sprite": "https://openmaptiles.github.io/positron-gl-style/sprite",
-  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=RiS4gsgZPZqeeMlIyxFo",
+  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=x6rAwsstZPh1FO6HjN5r",
   "layers": [
     {
       "id": "background",

@@ -53,10 +53,10 @@
 
                 var env_string = '__texty__env__dev__';
                 
-                var tiles_for_env = {
-                    '__texty__env__' + 'dev__': ["https://drimacus182.github.io/kyiv_crossings/data/fast_points/{z}/{x}/{y}.pbf"],
-                    '__texty__env__' + 'prod__': ["https://a.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf", "https://b.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf", "https://c.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf"]
-                };
+                var tiles_for_env = {};
+                tiles_for_env['__texty__env__' + 'dev__'] = ["https://drimacus182.github.io/kyiv_crossings/data/fast_points/{z}/{x}/{y}.pbf"],
+                tiles_for_env['__texty__env__' + 'prod__'] = ["https://a.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf", "https://b.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf", "https://c.texty.org.ua/maps/d/kyiv_crossings/fast_points/{z}/{x}/{y}.pbf"]
+                
                 
                 var fastpoint_tiles = tiles_for_env[env_string];
             

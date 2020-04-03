@@ -67,7 +67,7 @@
                     "type": "circle",
                     "source": {
                         type: "vector",
-                        tiles: ["https://drimacus182.github.io/kyiv_crossings/data/fast_points/{z}/{x}/{y}.pbf"]
+                        tiles: fastpoint_tiles
                     },
                     "source-layer": "fast",
 
